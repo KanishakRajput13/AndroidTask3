@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">SI Task 3</string>
+
+    <string name="hero1">"Ant-Man, also known as Scott Lang, is a former thief turned superhero who wields a suit that allows him to shrink in size while increasing his strength. Originally designed by Dr. Hank Pym, the suit gives Scott the ability to control his size, enabling him to shrink to subatomic levels or grow to enormous sizes, earning him the nickname \"Giant-Man\" when enlarged. Lang took on the Ant-Man mantle to protect his daughter, Cassie, and redeem himself after a life of crime. With the help of the Pym particles, Ant-Man can communicate and control ants, using them for surveillance or as part of his fighting strategy. His comedic personality and quick thinking make him a valuable member of the Avengers. Though often underestimated, Scott has played critical roles in major events like stopping Darren Cross, battling with the Avengers in \"Civil War,\" and helping undo the Blip in \"Avengers: Endgame\" by navigating the quantum realm. His connection to the quantum realm also made him crucial in the development of time travel in the MCU."
+    </string>
 </resources>
