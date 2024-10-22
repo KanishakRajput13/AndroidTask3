@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#000000"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HeroDetails">
+
+    <ImageView
+        android:id="@+id/heroImage"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/img1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/heroTitle"
+        android:textStyle="bold"
+        android:textSize="40sp"
+        android:layout_margin="12dp"
+        android:text="Ant Man"
+        android:textColor="#ffffff"
+        android:layout_gravity="center">
+
+    </TextView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/background"
+            android:padding="10dp" >
+            <TextView
+                android:id="@+id/heroDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/hero1"
+                android:textColor="#ffffff"
+                android:textSize="25sp">
+
+            </TextView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

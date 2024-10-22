@@ -12,17 +12,32 @@ import android.view.LayoutInflater
 class MyAdapter ( var heroArrayList: ArrayList<Hero>, var context : Activity) :
     RecyclerView.Adapter<MyAdapter.MyViewHolder>(){
 
+        private lateinit var myListener : OnItemClickListener
+        interface OnItemClickListener {
+            fun onItemClick(position: Int)
+        }
+
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        myListener = listener
+    }
+
         //to hold the views and preventing them from loading multiple times (to save memory)
-        class MyViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
+        class MyViewHolder(itemView: View, listener: OnItemClickListener) : RecyclerView.ViewHolder(itemView) {
             val hName = itemView.findViewById<TextView>(R.id.headingTitle)
             val hImage = itemView.findViewById<ImageView>(R.id.headingImage)
-    }
+
+            init {
+                itemView.setOnClickListener {
+                    listener.onItemClick(adapterPosition)
+                }
+            }
+        }
 
 
     //to create new views, if layout manager fails
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyAdapter.MyViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.each_row, parent, false)
-        return MyViewHolder(itemView)
+        return MyViewHolder(itemView, myListener)
     }
 
     override fun onBindViewHolder(holder: MyAdapter.MyViewHolder, position: Int) {
